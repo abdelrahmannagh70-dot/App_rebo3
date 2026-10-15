@@ -29,7 +29,8 @@ The application starts with a Welcome or Splash screen that introduces users to 
 
 ## 📂 Project Structure
 <img src="assets/images/app_3.png" width="300">
-<img src="assets/images/splash.png" width="300">
+<img src="assets/images/splash1.png" width="300">
+<img src="assets/images/register.png" width="300">
 
 ```text
 lib/

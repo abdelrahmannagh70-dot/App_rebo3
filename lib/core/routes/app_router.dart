@@ -1,5 +1,6 @@
 import 'package:app3/core/routes/app_route.dart';
 import 'package:app3/features/presentaion/ui/login_Screen.dart';
+import 'package:app3/features/presentaion/ui/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -15,14 +16,9 @@ class AppRouter {
           builder: (_) => loginScreen(),
         );
 
-      case AppRoutes.homeScreen:
-        return MaterialPageRoute(
-          builder: (_) => loginScreen(),
-        );
-
       case AppRoutes.welcomeScreen:
         return MaterialPageRoute(
-          builder: (_) => loginScreen(),
+          builder: (_) => const WelcomeScreen(),
         );
 
       default:
