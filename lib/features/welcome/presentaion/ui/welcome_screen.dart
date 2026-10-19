@@ -1,4 +1,7 @@
+import 'package:app3/core/widget/App_button.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -17,8 +20,21 @@ class WelcomeScreen extends StatelessWidget {
         height: double.infinity,
         child: Stack(
           children: [
-            // Background Image
-            Positioned.fill(
+
+            IconButton(
+              onPressed: () {
+                   if (context.locale.languageCode == 'ar') {
+                        context.setLocale(const Locale('en'));
+                   } else {
+                       context.setLocale(const Locale('ar'));
+                   }
+                   },
+                    icon: const Icon(Icons.language),
+                    ),
+
+
+
+      Positioned.fill(
               child: Image.asset(
                 'assets/images/welcome_background.png',
                 fit: BoxFit.cover,
@@ -30,14 +46,14 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
 
-            // Light overlay to improve visibility
+
             Positioned.fill(
               child: Container(
                 color: Colors.white.withValues(alpha: 0.08),
               ),
             ),
 
-            // Main Content
+
             SafeArea(
               child: Padding(
                 padding: EdgeInsets.symmetric(
@@ -48,9 +64,9 @@ class WelcomeScreen extends StatelessWidget {
                   children: [
                     SizedBox(height: screenHeight * 0.08),
 
-                    // Bookia Logo
+
                     Image.asset(
-                      'assets/images/logo 1.png',
+                      'assets/images/logo 2.png',
                       width: screenWidth * 0.62,
                       height: screenHeight * 0.10,
                       fit: BoxFit.contain,
@@ -58,7 +74,6 @@ class WelcomeScreen extends StatelessWidget {
 
                     const SizedBox(height: 14),
 
-                    // Subtitle
                     const Text(
                       'Order Your Book Now!',
                       textAlign: TextAlign.center,
@@ -72,7 +87,8 @@ class WelcomeScreen extends StatelessWidget {
 
                     const Spacer(),
 
-                    // Login Button
+
+
                     SizedBox(
                       width: double.infinity,
                       height: 58,
@@ -104,7 +120,6 @@ class WelcomeScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    // Register Button
                     SizedBox(
                       width: double.infinity,
                       height: 58,
