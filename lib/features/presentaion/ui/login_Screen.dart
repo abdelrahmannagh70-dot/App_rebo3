@@ -15,6 +15,11 @@ class loginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              IconButton(
+                onPressed: () => Navigator.pop(context),
+                icon: const Icon(Icons.arrow_back_ios_new),
+              ),
+
               Text(
                 "Welcome back! Glad\n to see you Again!",
                 style: AppTextStyle.font30Regular,

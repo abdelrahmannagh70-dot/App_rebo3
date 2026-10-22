@@ -1,6 +1,8 @@
 import 'package:app3/core/routes/app_route.dart';
+import 'package:app3/core/services/local/local_Helper.dart';
 import 'package:app3/core/themes/app_colors.dart';
 import 'package:app3/core/routes/app_router.dart';
+import 'package:app3/core/utils/app.constans.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,10 +27,17 @@ class BookiaApp extends StatelessWidget {
           fontFamily: 'DM',
         ),
 
-        initialRoute: AppRoutes.welcomeScreen,
+        initialRoute:initPage(),
 
         onGenerateRoute: AppRouter.onGenerateRoute,
       ),
     );
+  }
+  String initPage(){
+    if(localHelper.prefs?.getString(AppConstans.userToken)!=null){
+      return AppRoutes.homeScreen;
+    }else{
+      return AppRoutes.welcomeScreen;
+    }
   }
 }

@@ -51,7 +51,7 @@ class RegisterScreen extends StatelessWidget {
                 height: 52,
                 child: ElevatedButton(
                   onPressed: () {
-                    // هنضيف عملية التسجيل بعد كده
+                    
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFC5A653),
