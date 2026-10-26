@@ -12,7 +12,9 @@ class CustomTextFromFeild extends StatefulWidget {
   final bool isPassword;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
-const CustomTextFromFeild({super.key,required this.hintText,  this.isPassword = false, this.validator, this.controller});
+  final void Function(String?)? onChanged;
+  final bool? autofocus;
+const CustomTextFromFeild({super.key,required this.hintText,  this.isPassword = false, this.validator, this.controller, this.autofocus, this.onChanged});
 
   @override
   State<CustomTextFromFeild> createState() => _CustomTextFromFeildState();
@@ -24,6 +26,8 @@ class _CustomTextFromFeildState extends State<CustomTextFromFeild> {
 @override
 Widget build(BuildContext context) {
 return TextFormField(
+  autofocus: widget.autofocus??false,
+  onChanged: widget.onChanged,
   controller: widget.controller,
   obscureText: widget.isPassword&& isObcure,
   validator:widget.validator ,

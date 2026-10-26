@@ -37,6 +37,11 @@ The project follows a modular structure to keep the code organized, reusable, an
 ## ✨ Features
 
 ### Authentication
+ <img src="assets/images/search2.png" width="300" alt="search">
+ <img src="assets/images/search3.png" width="300" alt="searching">
+### Details
+ <img src="assets/images/details.png" width="300" >
+ <img src="assets/images/details3.png" width="300" alt="details in book">
 
 * Login screen with email and password fields.
 * Registration screen UI.
